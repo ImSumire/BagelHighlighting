@@ -1,0 +1,57 @@
+// Bagel code highlight example
+
+// Explicitly typed
+int x = 42;
+bool open = true;
+string h = "Hello world!";
+Option<string> content = Some("");
+
+// Implicitly typed
+auto y = 3.14;
+
+float benchmark<Arg, Output>((Arg -> Output) f, Arg arg, int iterations) {
+  local auto start_time = Unix.gettimeofday();
+  for 1..iterations {
+    f(arg);
+  }
+  local auto end_time = Unix.gettimeofday();
+  return end_time -. start_time;
+}
+
+class pattern_match<Input, Param, Output> (
+    (Input, (Param -> Ouput))[] cases;
+    (Param -> Ouput) default_action;
+) {
+    Hashtbl.t<Input, Param -> Output> matcher.create(List.length(cases));
+
+    unit init() {
+        List.iter(
+            (Input pattern, (Param -> Ouput) action) {
+                Hashtbl.add(matcher, pattern, action);
+            },
+            cases
+        )
+    }
+
+    Ouput invoke(Param param, Input input) {
+        try {
+            local auto action = Hashtbl.find(matcher, input);
+            return action(param);
+        } with Not_found {
+            return default_action(param);
+        }
+    }
+}
+
+module Arithmetic {
+  struct complexe {
+    float real, imag;
+  }
+
+  complex add(complex c1, complex c2) {
+    return {
+      c1.real +. c2.real,
+      c1.imag +. c2.imag
+    };
+  }
+}

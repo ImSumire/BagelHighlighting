@@ -1,0 +1,27 @@
+{
+  "name": "bagel",
+  "displayName": "Bagel",
+  "description": "Bagel Language Support",
+  "version": "0.0.1",
+  "publisher": "Violette",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "bl",
+      "aliases": ["Bagel Lang", "bl"],
+      "extensions": [".bl"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "bl",
+      "scopeName": "source.bl",
+      "path": "./syntaxes/bl.tmLanguage.json"
+    }]
+  }
+}
