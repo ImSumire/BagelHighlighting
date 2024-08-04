@@ -1,3 +1,20 @@
+<div align="center">
+    <pre>
+    ██████╗  █████╗  ██████╗ ███████╗██╗     
+    ██╔══██╗██╔══██╗██╔════╝ ██╔════╝██║     
+    ██████╔╝███████║██║  ███╗█████╗  ██║     
+    ██╔══██╗██╔══██║██║   ██║██╔══╝  ██║     
+    ██████╔╝██║  ██║╚██████╔╝███████╗███████╗
+    ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝
+    ︵‿︵‿୨♡୧‿︵‿︵
+    yummy re-stylized Ocaml
+  </pre>
+
+  [![Bagel: 0.1.0](https://img.shields.io/badge/Bagel-0.1.0-51355a?style=for-the-badge)](https://github.com/ImSumire/BagelLang)
+  [![License: GNU](https://img.shields.io/badge/License-GNU-ffd166?style=for-the-badge)](https://www.gnu.org/)
+  [![Vscode: ^1.92.0](https://img.shields.io/badge/Vscode-^1.92.0-678dc6?style=for-the-badge)](https://code.visualstudio.com/)
+</div>
+
 # Bagel Language Support for Visual Studio Code
 
 **Bagel** is a deliciously re-stylized version of OCaml, infused with the familiar syntax flavors of C++ and Rust. This language is designed to bring the best of these worlds together, allowing you to write expressive and efficient code with a fresh syntax. The Bagel language is compiled to OCaml.
